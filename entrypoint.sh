@@ -1,10 +1,10 @@
 #!/bin/sh
 set -e
 
-DB_HOST=$(echo $DATABASE_URL | cut -d'@' -f2 | cut -d':' -f1)
-DB_USER=$(echo $DATABASE_URL | cut -d'/' -f3 | cut -d':' -f1)
-DB_PASSWORD=$(echo $DATABASE_URL | cut -d'@' -f1 | cut -d':' -f3 | cut -d'/' -f3)
-DB_NAME=$(echo $DATABASE_URL | cut -d'/' -f4)
+DB_HOST=$(echo $DATABASE_HOST)
+DB_USER=$(echo $DATABASE_USER)
+DB_PASSWORD=$(echo $DATABASE_PASSWORD)
+DB_NAME=$(echo $DATABASE_NAME)
 
 
 # Wait for PostgreSQL to be available
